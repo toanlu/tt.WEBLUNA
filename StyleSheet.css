@@ -1,0 +1,334 @@
+﻿* {
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:white;
+    height: 100% !important;
+    margin: 0;
+    font-family: sans-serif;
+    /*display: flex!important;*/
+    /*flex-direction: column!important;*/
+}
+ 
+#logo {
+    width: 150px; 
+    height: 70px;
+    margin-left: 50px;
+}
+
+#menu1 ul {
+    background-color:white;
+    list-style-type: none;
+    height: 60px;
+    background-size: cover;
+    width: 100%;
+    }
+
+#menu1 ul li {
+    display: inline-block;
+    width: 130px;
+    height: 80px;
+    line-height: 60px; 
+    vertical-align: middle;
+    
+}
+
+#menu1 ul li a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;  
+    font-size:22px;
+    
+}
+
+#menu1 ul li a:hover{
+    background-color: black;
+    color: white;
+    
+}
+#menu1 ul ul{
+display:block;
+position:relative;
+
+}
+
+#menu1 ul ul li{
+	width: 130%;
+    height: 30px;
+    
+}
+
+#menu1 ul ul li a{
+	
+	padding: 10px 30px;
+    float: none;
+    background-color:white;
+    font-size: 18px;
+}
+#menu1 ul ul {
+	visibility:hidden;
+    border-left: none;
+}
+
+#menu1  li:hover >ul{
+
+visibility:visible;	
+}
+
+
+
+
+/* LOGIN / SIGN UP BUTTON */
+
+.btn{
+    color: black;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+.btn:hover {
+    color:darkgray;
+}
+
+/* END LOGIN / SIGN UP BUTTON */
+
+
+#slider {
+  overflow: hidden;
+  height:  600px;
+  width:  900px;
+  margin-left: 300px;
+    margin-bottom: 30px;
+}
+.slides  input{
+    display: none;
+    
+}
+
+.slides {
+     width: 500%;
+    height: 500px;
+  /*width: 2912px;*/
+  display:flex;
+  transition: 0.5s;
+  -webkit-animation: slide 10s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+.slide img{
+    margin-left:28px;
+    width: 700px;
+    height: 595px;
+}
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -728px;}
+  50% {margin-left: -728px;}
+  60% {margin-left: -1456px;}
+  80% {margin-left: -1456px;}
+    90% {
+        margin-left: -2184px;
+    }
+       
+}
+
+
+
+
+
+
+
+.navigation-manual{
+    position: absolute;
+    width: 1000px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background:white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+/* END MANUAL NAVIGATION */
+
+/* AUTOMATIC NAVIGATION */
+
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    text-align:center;
+    margin-top: 570px;
+    margin-right:400px;
+}
+
+.navigation-auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: white;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: white;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: white;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: white;
+}
+
+#footer {
+    background-color: #333;
+    width:100%;
+    height: 350px;
+    margin-top: auto;
+}
+
+.footer-content {
+    width: 1200px;
+    margin: auto;
+}
+
+.footer-content .footer-btn {
+    width: 25%;
+    float: left;
+}
+
+.footer-content .footer-btn .title {
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+.footer-content .footer-btn ul li {
+    padding: 10px 0;
+}
+
+.footer-content .footer-btn ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.footer-content .footer-btn p {
+    color: grey;
+}
+
+.footer-content .footer-btn ul li a:hover {
+    color: white;
+    font-size: 20px;
+    background: black;
+    padding:5px;
+}
+
+.footer-btn p {
+    padding-bottom: 25px;
+}
+
+.fab {
+    border: 2px solid black;
+    border-radius: 50%;
+    max-width: 30px;
+    width: 30px;
+    height: 25px;
+    text-align: center;        
+    padding-top: 5px;
+    line-height: 21.5px;
+    background: grey;
+    color:black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:hover .fa-facebook{      
+    color:rgb(0, 104, 240);
+}
+
+a:hover .fa-instagram {            
+    color:rgb(191, 68, 207);
+}
+
+a:hover .fa-twitter {   
+    color: cyan;
+}
+
+a:hover .fa-youtube { 
+    color:red;
+}
+
+
+.gioithieu .left-content {
+    height: 650px;
+    float: left;
+}
+
+.gioithieu .left-content a {
+    text-decoration: none;
+}
+
+.gioithieu .left-content a p {
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.gioithieu .left-content a:hover p {
+    color: red;
+    font-size: 20px;
+}
+
+.gioithieu #right div{
+    margin-top: 20px;
+    
+}

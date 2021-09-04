@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+     <link href="StyleSheet.css" rel="stylesheet" type="text/css"/>
+<body>
+    <form id="form1" style="height: 100% !important" runat="server">
+        <div id="menu1">
+            <ul>
+                <li>
+                   <a href="TrangChu.aspx" > <img id="logo" src="image/logo.PNG"></li></a>
+                <li style="margin-left: 130px"><a href="TrangChu.aspx">HOME </a></li>
+                <li><a href="About.aspx">ABOUT </a></li>
+                <li><a href="Shop.aspx">SHOP </a>
+                    <ul>
+                        <li><a href="Shirt.aspx">Shirts</a></li>
+                        <li><a href="Hoodie.aspx">Hoodie</a></li>
+                        <li><a href="CropTops.aspx">Crop Tops</a></li>
+                        <li><a href="Dresses.aspx">Dresses</a></li>
+                        <li><a href="Bottoms.aspx">Bottoms</a></li>
+                        <li><a href="sets.aspx">Sets</a></li>
+                        <li><a href="Accessories.aspx">Accessories</a></li>
+                    </ul>
+                </li>
+                 <li ><a href="Search.aspx">SEARCH </a></li>
+                <li style="margin-left: 10px"><a href="Contact.aspx">CONTACT </a></li>
+                 
+                <li class="btn" onclick="animadn()" style="margin-left: 8px"> <a href="User.aspx">Login </a></li>
+                <li class="btn" onclick="animadk()" style="margin-left: 5px"><a href="Admin.aspx">Sign up </a></li>
+                  <li>
+                    <asp:HyperLink ID="tabGioHang" runat="server" NavigateUrl="~/cart1.aspx"><i class="fa fa-shopping-cart" style="font-size:22px"></i>Cart</asp:HyperLink>
+
+                  </li>
+                
+            </ul>
+
+        </div>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer" style="clear: left; padding-top: 20px">
+            <div class="footer-content">
+                <div class="footer-btn">
+                    <p class="title">Luna</p>
+                    <ul>
+                        <p>&copy 2021 Luna All Rights Reserved</p>
+                        
+                    </ul>
+                </div>
+                <div class="footer-btn">
+                    <p class="title">About Us</p>
+                    <ul>
+                        <li><a href="About.aspx">Our Story</a></li>
+                       
+
+                    </ul>
+                </div>
+                <div class="footer-btn">
+                    <p class="title">Help</p>
+                    <ul>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                        
+
+                </div>
+                <div class="footer-btn">
+                    <p class="title">Social</p>
+                    <ul>
+                        <li><a href="Contact.aspx">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
